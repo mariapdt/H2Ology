@@ -1,56 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="H2Ology - Your website description" />
-    <title>H2Ology</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div class="container">
-          <h1 class="logo">H2Ology</h1>
-          <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H2Ology - Where Hydration Meets Innovation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">H2Ology</div>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#solution" class="nav-link">Solution</a></li>
+                <li><a href="#calculator" class="nav-link">Calculator</a></li>
+                <li><a href="#sustainability" class="nav-link">Sustainability</a></li>
+            </ul>
         </div>
-      </nav>
-    </header>
+    </nav>
 
-    <main>
-      <section id="home" class="hero">
-        <div class="container">
-          <h2>Welcome to H2Ology</h2>
-          <p>Your website is ready to go!</p>
-          <button class="cta-button">Get Started</button>
+    <!-- HOME PAGE -->
+    <section id="home" class="page active">
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="hero-content">
+                <h1>H2Ology</h1>
+                <p class="tagline">Where Hydration Meets Innovation</p>
+                <p class="hero-description">
+                    At H2Ology, we believe that staying hydrated should be simple, smart, and sustainable. 
+                    Our mission is to help people build healthy hydration habits using technology and eco-friendly design.
+                </p>
+                <p class="hero-description">
+                    We create smart water bottles that connect to your smartphone, track your daily water intake, 
+                    remind you to drink, and motivate you to reach your hydration goals — all while reducing 
+                    single-use plastic waste.
+                </p>
+                <a href="#solution" class="cta-button">Discover Our Solution</a>
+            </div>
         </div>
-      </section>
 
-      <section id="about" class="about">
-        <div class="container">
-          <h2>About</h2>
-          <p>Add your content here.</p>
+        <!-- Values Section -->
+        <div class="values-section">
+            <div class="container">
+                <h2>Our Values</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">💧</div>
+                        <h3>Health & Wellness</h3>
+                        <p>Helping you build healthy hydration habits for a better life</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🌱</div>
+                        <h3>Sustainability</h3>
+                        <p>Eco-friendly design that reduces plastic waste</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">⚙️</div>
+                        <h3>Innovation</h3>
+                        <p>Smart technology that makes hydration effortless</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🤝</div>
+                        <h3>Community</h3>
+                        <p>Building a movement for healthier, sustainable living</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </section>
 
-      <section id="contact" class="contact">
-        <div class="container">
-          <h2>Contact</h2>
-          <p>Get in touch with us.</p>
+        <!-- Mission & Vision Section -->
+        <div class="mission-vision">
+            <div class="container">
+                <h2>🌍 Mission & Vision</h2>
+                <div class="mission-vision-grid">
+                    <div class="mission-card">
+                        <h3>Our Mission</h3>
+                        <p class="subtitle">To inspire smarter hydration habits through innovation and sustainability.</p>
+                        <p>
+                            At H2Ology, our goal is to help people stay healthy, save water, and reduce plastic waste 
+                            by combining intelligent design with eco-friendly materials.
+                        </p>
+                    </div>
+                    <div class="vision-card">
+                        <h3>Our Vision</h3>
+                        <p class="subtitle">We envision a world where technology empowers people to care for both their health and the environment.</p>
+                        <p>
+                            Through our smart hydration solutions, we aim to make every sip meaningful — for you and for the planet.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </section>
-    </main>
 
-    <footer>
-      <div class="container">
-        <p>&copy; 2025 H2Ology. All rights reserved.</p>
-      </div>
-    </footer>
+        <!-- Contact Section -->
+        <div class="contact-section">
+            <div class="container">
+                <h2>✉️ Contact Us</h2>
+                <p class="contact-intro">Have questions, feedback, or partnership ideas? We'd love to hear from you!</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <div>
+                            <strong>Email</strong>
+                            <p>info@h2ology.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <div>
+                            <strong>Phone</strong>
+                            <p>+1 (555) 234-6789</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div>
+                            <strong>Address</strong>
+                            <p>H2Ology HQ, 123 GreenTech Street, EcoCity, USA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Drink with purpose — powered by <strong>H2Ology</strong>.</p>
+        </footer>
+    </section>
+
+    <!-- SOLUTION PAGE -->
+    <section id="solution" class="page">
+        <div class="container page-container">
+            <h1 class="page-title">Meet the H2Ology Smart Bottle</h1>
+            <p class="page-intro">
+                The H2Ology Smart Bottle is a next-generation reusable bottle equipped with a built-in 
+                hydration sensor and Bluetooth connectivity. It monitors how much water you drink 
+                throughout the day and syncs the data with our mobile app.
+            </p>
+
+            <!-- Bottle Features -->
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔋</div>
+                    <h3>Long Battery Life</h3>
+                    <p>Up to 10 days per charge</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌿</div>
+                    <h3>Eco-Friendly Materials</h3>
+                    <p>Stainless steel or recycled plastic</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💧</div>
+                    <h3>Leak-Proof Design</h3>
+                    <p>Stylish and minimalist</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌡️</div>
+                    <h3>Temperature Display</h3>
+                    <p>Shows if your drink is hot or cold</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3>LED Glow Reminder</h3>
+                    <p>Alerts when it's time to drink</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Real-Time Tracking</h3>
+                    <p>Monitor water intake instantly</p>
+                </div>
+            </div>
+
+            <!-- Comparison Table -->
+            <div class="comparison-section">
+                <h2>Why Choose H2Ology?</h2>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Regular Bottle</th>
+                            <th>H2Ology Smart Bottle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tracks water intake</td>
+                            <td>❌</td>
+                            <td>✅ (high accuracy)</td>
+                        </tr>
+                        <tr>
+                            <td>App connection</td>
+                            <td>❌</td>
+                            <td>✅ (seamless sync)</td>
+                        </tr>
+                        <tr>
+                            <td>Drink reminders</td>
+                            <td>❌</td>
+                            <td>✅ (customizable)</td>
+                        </tr>
+                        <tr>
+                            <td>Eco-friendly materials</td>
+                            <td>❌</td>
+                            <td>✅ (100% sustainable)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- App Section -->
+            <div class="app-section">
+                <h2>📱 Your Hydration Coach in Your Pocket</h2>
+                <p class="app-intro">
+                    The H2Ology App connects to your bottle via Bluetooth to automatically record your 
+                    water consumption. It's designed to make hydration engaging, personalized, and fun.
+                </p>
+                <div class="app-features">
+                    <div class="app-feature">
+                        <h3>📊 Daily Intake Tracker</h3>
+                        <p>See exactly how much water you've consumed and how much you still need.</p>
+                    </div>
+                    <div class="app-feature">
+                        <h3>🎯 Personalized Goals</h3>
+                        <p>The app calculates your ideal daily water intake based on your weight, age, and activity level.</p>
+                    </div>
+                    <div class="app-feature">
+                        <h3>⏰ Smart Reminders</h3>
+                        <p>Get gentle notifications when it's time to hydrate.</p>
+                    </div>
+                    <div class="app-feature">
+                        <h3>📈 Statistics & Progress Reports</h3>
+                        <p>Track your weekly or monthly hydration trends.</p>
+                    </div>
+                    <div class="app-feature">
+                        <h3>🏆 Gamification</h3>
+                        <p>Earn badges and challenges for hitting hydration goals.</p>
+                    </div>
+                    <div class="app-feature">
+                        <h3>👥 Community Support</h3>
+                        <p>Join hydration challenges with friends or coworkers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <p>Drink with purpose — powered by <strong>H2Ology</strong>.</p>
+        </footer>
+    </section>
+
+    <!-- CALCULATOR PAGE -->
+    <section id="calculator" class="page">
+        <div class="container page-container">
+            <h1 class="page-title">💧 Hydration Calculator</h1>
+            <p class="page-intro">
+                Discover how much water you need to drink daily based on your body weight. 
+                Our calculator uses the formula: <strong>Water (liters) = Body weight (kg) × 0.033</strong>
+            </p>
+
+            <div class="calculator-card">
+                <div class="calculator-form">
+                    <label for="weight">Enter Your Weight (kg)</label>
+                    <input type="number" id="weight" placeholder="e.g., 70" min="1" max="300">
+                    <button class="calculate-btn" onclick="calculateWater()">Calculate</button>
+                </div>
+                <div id="result" class="calculator-result"></div>
+                <div class="calculator-info">
+                    <h3>💡 Tips for Better Hydration</h3>
+                    <ul>
+                        <li>Drink water regularly throughout the day, not all at once</li>
+                        <li>Increase intake during exercise or hot weather</li>
+                        <li>Listen to your body - thirst is a sign you need water</li>
+                        <li>Start your day with a glass of water</li>
+                        <li>Use your H2Ology Smart Bottle to track and stay on target!</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <p>Drink with purpose — powered by <strong>H2Ology</strong>.</p>
+        </footer>
+    </section>
+
+    <!-- SUSTAINABILITY PAGE -->
+    <section id="sustainability" class="page">
+        <div class="container page-container">
+            <h1 class="page-title">🌍 Hydration That Cares for the Planet</h1>
+            <p class="page-intro">
+                At H2Ology, innovation goes hand-in-hand with sustainability. 
+                Every bottle we make is a step toward reducing plastic pollution and conserving water resources.
+            </p>
+
+            <div class="sustainability-grid">
+                <div class="sustainability-card">
+                    <div class="sustainability-icon">♻️</div>
+                    <h3>Reusable Design</h3>
+                    <p>Each H2Ology bottle replaces hundreds of single-use plastic bottles per year.</p>
+                </div>
+                <div class="sustainability-card">
+                    <div class="sustainability-icon">🌿</div>
+                    <h3>Eco-Friendly Materials</h3>
+                    <p>We use recycled and BPA-free materials to ensure safety for you and the planet.</p>
+                </div>
+                <div class="sustainability-card">
+                    <div class="sustainability-icon">📦</div>
+                    <h3>Sustainable Packaging</h3>
+                    <p>Our packaging is made from 100% recyclable cardboard and plant-based inks.</p>
+                </div>
+                <div class="sustainability-card">
+                    <div class="sustainability-icon">💧</div>
+                    <h3>Smart Hydration = Less Waste</h3>
+                    <p>By tracking water intake, users waste less water and build mindful habits.</p>
+                </div>
+                <div class="sustainability-card">
+                    <div class="sustainability-icon">🌳</div>
+                    <h3>Giving Back</h3>
+                    <p>A portion of every sale supports clean water projects and reforestation programs.</p>
+                </div>
+            </div>
+
+            <div class="impact-section">
+                <h2>Our Impact So Far</h2>
+                <div class="impact-stats">
+                    <div class="stat">
+                        <div class="stat-number">500K+</div>
+                        <div class="stat-label">Plastic Bottles Saved</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">1,000+</div>
+                        <div class="stat-label">Trees Planted</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Clean Water Projects Supported</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="call-to-action">
+                <h2>Join the Movement</h2>
+                <p>Every H2Ology bottle makes a difference. Together, we can create a healthier planet, one sip at a time.</p>
+                <a href="#home" class="cta-button">Learn More About H2Ology</a>
+            </div>
+        </div>
+        <footer class="footer">
+            <p>Drink with purpose — powered by <strong>H2Ology</strong>.</p>
+        </footer>
+    </section>
 
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
