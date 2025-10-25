@@ -569,6 +569,11 @@ body {
     line-height: 1.8;
 }
 
+/* Ensure company about text is always readable (override any inherited white) */
+.company-section .section-intro {
+    color: var(--dark-color) !important;
+}
+
 /* Mission & Vision Section */
 .mission-vision-section {
     padding: 6rem 3rem;
