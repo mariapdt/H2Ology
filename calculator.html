@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hydration Calculator - H2Ology</title>
+    <title>Calculator de hidratare - H2Ology</title>
     <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
@@ -19,13 +19,13 @@
           <span>H2Ology</span>
         </div>
         <ul class="nav-menu" id="navMenu">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="solution.html" class="nav-link">Solution</a></li>
+          <li><a href="index.html" class="nav-link">Acasă</a></li>
+          <li><a href="solution.html" class="nav-link">Soluție</a></li>
           <li>
             <a href="calculator.html" class="nav-link active">Calculator</a>
           </li>
           <li>
-            <a href="sustainability.html" class="nav-link">Sustainability</a>
+            <a href="sustainability.html" class="nav-link">Sustenabilitate</a>
           </li>
         </ul>
         <div class="menu-toggle" id="menuToggle">
@@ -41,12 +41,11 @@
         <div class="page-icon-large">
           <i class="fas fa-calculator"></i>
         </div>
-        <h1 class="page-title">Hydration Calculator</h1>
+        <h1 class="page-title">Calculator de hidratare</h1>
       </div>
       <p class="page-intro">
-        Discover how much water you need to drink daily based on your body
-        weight. Our calculator uses the formula:
-        <strong>Water (liters) = Body weight (kg) × 0.033</strong>
+        Află câtă apă ai nevoie să bei zilnic în funcție de greutatea corporală. Calculatorul folosește formula:
+        <strong>Apă (litri) = Greutate (kg) × 0,033</strong>
       </p>
 
       <!-- Calculator Visual Elements -->
@@ -55,7 +54,7 @@
           <div class="visual-icon">
             <i class="fas fa-weight"></i>
           </div>
-          <span>Your Weight</span>
+          <span>Greutatea ta</span>
         </div>
         <div class="visual-arrow">
           <i class="fas fa-arrow-right"></i>
@@ -73,53 +72,56 @@
           <div class="visual-icon">
             <i class="fas fa-tint"></i>
           </div>
-          <span>Daily Goal</span>
+          <span>Obiectiv zilnic</span>
         </div>
       </div>
 
       <div class="calculator-card">
         <div class="calculator-form">
-          <label for="weight">Enter Your Weight (kg)</label>
+          <label for="weight">Introdu greutatea (kg)</label>
           <input
             type="number"
             id="weight"
-            placeholder="e.g., 70"
+            placeholder="ex.: 70"
             min="1"
             max="300"
           />
           <button onclick="calculateWater()" class="calc-button">
-            <i class="fas fa-calculator"></i> Calculate
+            <i class="fas fa-calculator"></i> Calculează
           </button>
         </div>
         <div id="result" class="result"></div>
       </div>
 
       <div class="hydration-tips">
-        <h2>Hydration Tips</h2>
+        <h2>Sfaturi pentru hidratare</h2>
         <div class="tips-grid">
-          <button class="carousel-btn prev" onclick="scrollCarousel('tips', -1)">
+          <button
+            class="carousel-btn prev"
+            onclick="scrollCarousel('tips', -1)"
+          >
             <i class="fas fa-chevron-left"></i>
           </button>
           <div class="tips-grid-wrapper">
             <div class="tip-card">
               <i class="fas fa-clock"></i>
-              <p>Drink water regularly throughout the day, not all at once</p>
+              <p>Bea apă regulat pe parcursul zilei, nu toată odată</p>
             </div>
             <div class="tip-card">
               <i class="fas fa-running"></i>
-              <p>Increase intake during exercise or hot weather</p>
+              <p>Mărește aportul în timpul efortului sau pe vreme caldă</p>
             </div>
             <div class="tip-card">
               <i class="fas fa-ear-listen"></i>
-              <p>Listen to your body - thirst is a sign you need water</p>
+              <p>Ascultă-ți corpul – setea e un semn că ai nevoie de apă</p>
             </div>
             <div class="tip-card">
               <i class="fas fa-sun"></i>
-              <p>Start your day with a glass of water</p>
+              <p>Începe-ți ziua cu un pahar de apă</p>
             </div>
             <div class="tip-card">
               <i class="fas fa-bottle-water"></i>
-              <p>Use your H2Ology Smart Bottle to track and stay on target!</p>
+              <p>Folosește sticla inteligentă H2Ology ca să urmărești și să-ți atingi obiectivul!</p>
             </div>
           </div>
           <button class="carousel-btn next" onclick="scrollCarousel('tips', 1)">
@@ -130,7 +132,7 @@
     </div>
 
     <footer class="footer">
-      <p>Drink with purpose — powered by <strong>H2Ology</strong>.</p>
+      <p>Bea cu scop — cu <strong>H2Ology</strong>.</p>
     </footer>
 
     <script src="script.js"></script>

@@ -174,6 +174,11 @@ body {
     display: inline-block;
 }
 
+/* Make the globe icon in page headers use the same green as the earth icon */
+.page-icon-large .fa-globe {
+    color: #27ae60;
+}
+
 @keyframes rotate {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
@@ -932,13 +937,15 @@ body {
     position: relative;
     overflow: hidden;
     margin-bottom: 5rem;
-    padding: 0 60px;
+    padding: 3rem 60px; /* side padding lives on the viewport, not the moving wrapper */
 }
 
 .features-grid-wrapper {
     display: flex;
     gap: 2.5rem;
     transition: transform 0.5s ease;
+    padding: 0; /* prevent shifting margins during translateX */
+    width: 100%; /* ensure 3-card sizing uses the viewport width */
 }
 
 .feature-card {
@@ -981,11 +988,11 @@ body {
 }
 
 .carousel-btn.prev {
-    left: 0;
+    left: 12px; /* keep hover scale from touching/clipping container edge */
 }
 
 .carousel-btn.next {
-    right: 0;
+    right: 12px; /* keep hover scale from touching/clipping container edge */
 }
 
 .feature-card::after {
@@ -1031,6 +1038,36 @@ body {
     color: #5a6c7d;
     line-height: 1.7;
     font-size: 1.05rem;
+}
+
+/* Hide non-visible carousel items without affecting layout */
+.carousel-hidden {
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition: none !important; /* avoid accidental fades on hide */
+}
+
+/* Suppress fade/opacity transitions during programmatic resets */
+.carousel-no-fade .feature-card,
+.carousel-no-fade .tip-card,
+.carousel-no-fade .sustainability-card {
+    transition: none !important;
+}
+
+/* Smooth fade for carousel items (overrides earlier transition timings) */
+/* Default cards: only transform tween; opacity fades are opt-in via .carousel-entering */
+.feature-card,
+.tip-card,
+.sustainability-card {
+    transition: transform 0.4s ease;
+}
+
+/* Only newly entering items fade in */
+.carousel-entering {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transition: opacity 0.6s ease-in-out !important;
 }
 
 /* Comparison Table */
@@ -1695,13 +1732,15 @@ body {
     overflow: hidden;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 60px;
+    padding: 3rem 60px; /* keep three full cards visible without cropping */
 }
 
 .tips-grid-wrapper {
     display: flex;
     gap: 2rem;
     transition: transform 0.5s ease;
+    padding: 0; /* padding belongs to the viewport container */
+    width: 100%; /* ensure 3-card sizing uses the viewport width */
 }
 
 .tip-card {
@@ -1758,9 +1797,13 @@ body {
     font-size: 8rem;
     animation: rotate 20s linear infinite;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #27ae60;
 }
 
@@ -1811,13 +1854,15 @@ body {
     position: relative;
     overflow: hidden;
     margin-bottom: 5rem;
-    padding: 0 60px;
+    padding: 3rem 60px; /* align with JS width calc and prevent edge cropping */
 }
 
 .sustainability-grid-wrapper {
     display: flex;
     gap: 2.5rem;
     transition: transform 0.5s ease;
+    padding: 0; /* wrapper moves; keep padding on the viewport */
+    width: 100%; /* ensure 3-card sizing uses the viewport width */
 }
 
 .sustainability-card {
@@ -2147,11 +2192,11 @@ body {
     }
     
     .carousel-btn.prev {
-        left: 0;
+        left: 8px; /* mobile-safe offset for hover scale */
     }
     
     .carousel-btn.next {
-        right: 0;
+        right: 8px; /* mobile-safe offset for hover scale */
     }
 
     .phone-mockup-container {
