@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solution - H2Ology Smart Bottle</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <i class="fas fa-bottle-water"></i>
+          <span>H2Ology</span>
+        </div>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="solution.html" class="nav-link active">Solution</a></li>
+          <li><a href="calculator.html" class="nav-link">Calculator</a></li>
+          <li>
+            <a href="sustainability.html" class="nav-link">Sustainability</a>
+          </li>
+        </ul>
+        <div class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container page-container" style="padding-top: 120px">
+      <div class="page-header">
+        <div class="page-icon-large">
+          <i class="fas fa-bottle-water"></i>
+        </div>
+        <h1 class="page-title">Meet the H2Ology Smart Bottle</h1>
+      </div>
+      <p class="page-intro">
+        The H2Ology Smart Bottle is a next-generation reusable bottle equipped
+        with a built-in hydration sensor and Bluetooth connectivity. It monitors
+        how much water you drink throughout the day and syncs the data with our
+        mobile app.
+      </p>
+
+      <!-- Product Showcase -->
+      <div class="product-showcase">
+        <div class="product-visual">
+          <img
+            src="images/water_bottle.png"
+            alt="H2Ology Smart Water Bottle"
+            class="bottle-image"
+          />
+        </div>
+        <div class="product-highlights">
+          <div class="highlight-item">
+            <span class="highlight-icon">
+              <i class="fas fa-chart-line"></i>
+            </span>
+            <span class="highlight-text">Smart Tracking</span>
+          </div>
+          <div class="highlight-item">
+            <span class="highlight-icon">
+              <i class="fas fa-bluetooth-b"></i>
+            </span>
+            <span class="highlight-text">Bluetooth Sync</span>
+          </div>
+          <div class="highlight-item">
+            <span class="highlight-icon">
+              <i class="fas fa-recycle"></i>
+            </span>
+            <span class="highlight-text">100% Eco-Friendly</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottle Features -->
+      <div class="features-grid">
+        <button class="carousel-btn prev" onclick="scrollCarousel('features', -1)">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="features-grid-wrapper">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-battery-full"></i>
+            </div>
+            <h3>Long Battery Life</h3>
+            <p>Up to 10 days per charge</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-seedling"></i>
+            </div>
+            <h3>Eco-Friendly Materials</h3>
+            <p>Stainless steel or recycled plastic</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-temperature-low"></i>
+            </div>
+            <h3>Temperature Display</h3>
+            <p>Know if your water is cold or warm</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>BPA-Free & Safe</h3>
+            <p>100% safe for daily use</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-bell"></i>
+            </div>
+            <h3>Smart Reminders</h3>
+            <p>Gentle vibrations when it's time to drink</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-sync-alt"></i>
+            </div>
+            <h3>Real-Time Sync</h3>
+            <p>Data syncs instantly to the app</p>
+          </div>
+        </div>
+        <button class="carousel-btn next" onclick="scrollCarousel('features', 1)">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <!-- App Features -->
+      <div class="app-section">
+        <h2>The H2Ology App</h2>
+        <p class="section-intro">
+          The H2Ology app is your personal hydration assistant. It works
+          seamlessly with your smart bottle to help you build healthy habits.
+        </p>
+
+        <div class="phone-mockup-container">
+          <div class="phone-mockup">
+            <img
+              src="images/app.PNG"
+              alt="H2Ology App Interface"
+              class="app-screenshot"
+            />
+          </div>
+
+          <div class="app-features-list">
+            <div class="app-feature">
+              <i class="fas fa-bell"></i>
+              <h3>Personalized Reminders</h3>
+              <p>
+                Get notifications based on your schedule and activity level.
+              </p>
+            </div>
+            <div class="app-feature">
+              <i class="fas fa-chart-bar"></i>
+              <h3>Daily & Weekly Reports</h3>
+              <p>See your hydration trends and celebrate your progress.</p>
+            </div>
+            <div class="app-feature">
+              <i class="fas fa-trophy"></i>
+              <h3>Achievements & Challenges</h3>
+              <p>Stay motivated with goals, streaks, and badges.</p>
+            </div>
+            <div class="app-feature">
+              <i class="fas fa-users"></i>
+              <h3>Social Features</h3>
+              <p>Join hydration challenges with friends or coworkers.</p>
+            </div>
+            <div class="app-feature">
+              <i class="fas fa-chart-line"></i>
+              <h3>Statistics & Progress Reports</h3>
+              <p>Track your weekly or monthly hydration trends.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>Drink with purpose — powered by <strong>H2Ology</strong>.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

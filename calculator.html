@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hydration Calculator - H2Ology</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <i class="fas fa-bottle-water"></i>
+          <span>H2Ology</span>
+        </div>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="solution.html" class="nav-link">Solution</a></li>
+          <li>
+            <a href="calculator.html" class="nav-link active">Calculator</a>
+          </li>
+          <li>
+            <a href="sustainability.html" class="nav-link">Sustainability</a>
+          </li>
+        </ul>
+        <div class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container page-container" style="padding-top: 120px">
+      <div class="page-header">
+        <div class="page-icon-large">
+          <i class="fas fa-calculator"></i>
+        </div>
+        <h1 class="page-title">Hydration Calculator</h1>
+      </div>
+      <p class="page-intro">
+        Discover how much water you need to drink daily based on your body
+        weight. Our calculator uses the formula:
+        <strong>Water (liters) = Body weight (kg) × 0.033</strong>
+      </p>
+
+      <!-- Calculator Visual Elements -->
+      <div class="calculator-visual-banner">
+        <div class="visual-item">
+          <div class="visual-icon">
+            <i class="fas fa-weight"></i>
+          </div>
+          <span>Your Weight</span>
+        </div>
+        <div class="visual-arrow">
+          <i class="fas fa-arrow-right"></i>
+        </div>
+        <div class="visual-item">
+          <div class="visual-icon">
+            <i class="fas fa-flask"></i>
+          </div>
+          <span>Formula</span>
+        </div>
+        <div class="visual-arrow">
+          <i class="fas fa-arrow-right"></i>
+        </div>
+        <div class="visual-item">
+          <div class="visual-icon">
+            <i class="fas fa-tint"></i>
+          </div>
+          <span>Daily Goal</span>
+        </div>
+      </div>
+
+      <div class="calculator-card">
+        <div class="calculator-form">
+          <label for="weight">Enter Your Weight (kg)</label>
+          <input
+            type="number"
+            id="weight"
+            placeholder="e.g., 70"
+            min="1"
+            max="300"
+          />
+          <button onclick="calculateWater()" class="calc-button">
+            <i class="fas fa-calculator"></i> Calculate
+          </button>
+        </div>
+        <div id="result" class="result"></div>
+      </div>
+
+      <div class="hydration-tips">
+        <h2>Hydration Tips</h2>
+        <div class="tips-grid">
+          <button class="carousel-btn prev" onclick="scrollCarousel('tips', -1)">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="tips-grid-wrapper">
+            <div class="tip-card">
+              <i class="fas fa-clock"></i>
+              <p>Drink water regularly throughout the day, not all at once</p>
+            </div>
+            <div class="tip-card">
+              <i class="fas fa-running"></i>
+              <p>Increase intake during exercise or hot weather</p>
+            </div>
+            <div class="tip-card">
+              <i class="fas fa-ear-listen"></i>
+              <p>Listen to your body - thirst is a sign you need water</p>
+            </div>
+            <div class="tip-card">
+              <i class="fas fa-sun"></i>
+              <p>Start your day with a glass of water</p>
+            </div>
+            <div class="tip-card">
+              <i class="fas fa-bottle-water"></i>
+              <p>Use your H2Ology Smart Bottle to track and stay on target!</p>
+            </div>
+          </div>
+          <button class="carousel-btn next" onclick="scrollCarousel('tips', 1)">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>Drink with purpose — powered by <strong>H2Ology</strong>.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
