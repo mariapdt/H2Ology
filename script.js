@@ -233,13 +233,58 @@ function initCarousels(reinit = false) {
 
     const state = carouselStates[type];
 
+    // --- Mobile swipe/touch support ---
+    let touchStartX = null;
+    let touchEndX = null;
+    // Remove previous listeners to avoid duplicates
+    wrapper.ontouchstart = null;
+    wrapper.ontouchend = null;
+    wrapper.ontouchmove = null;
+    wrapper.addEventListener('touchstart', function(e) {
+      if (e.touches.length === 1) {
+        touchStartX = e.touches[0].clientX;
+      }
+    }, {passive: true});
+    wrapper.addEventListener('touchend', function(e) {
+      if (touchStartX !== null && e.changedTouches.length === 1) {
+        touchEndX = e.changedTouches[0].clientX;
+        const deltaX = touchEndX - touchStartX;
+        if (Math.abs(deltaX) > 40) {
+          if (deltaX < 0) scrollCarousel(type, 1); // swipe left, next
+          else scrollCarousel(type, -1); // swipe right, prev
+        }
+      }
+      touchStartX = null;
+      touchEndX = null;
+    }, {passive: true});
+    // --- End mobile swipe/touch support ---
+
     // Measure available width inside the viewport (exclude grid side paddings)
     const gridStyles = getComputedStyle(grid);
     const gridPadLeft = parseFloat(gridStyles.paddingLeft || "0") || 0;
     const gridPadRight = parseFloat(gridStyles.paddingRight || "0") || 0;
     const containerWidth = grid.clientWidth - gridPadLeft - gridPadRight;
-    const gapSize = type === "tips" ? 32 : 40;
-    const cardWidth = (containerWidth - 2 * gapSize) / 3;
+    let gapSize = type === "tips" ? 32 : 40;
+    let cardWidth;
+    let cardsPerView = 3;
+    if (window.innerWidth <= 600) {
+      cardsPerView = 1;
+    } else if (window.innerWidth <= 1024) {
+      cardsPerView = 2;
+    }
+    cardWidth = (containerWidth - gapSize * (cardsPerView - 1)) / cardsPerView;
+    // Remove extra padding, keep layout identical to desktop
+    if (wrapper) {
+      wrapper.style.paddingLeft = '';
+      wrapper.style.paddingRight = '';
+       if (cardsPerView <= 2) {
+        wrapper.style.paddingTop = '60px';
+        wrapper.style.paddingBottom = '60px';
+      } else {
+        wrapper.style.paddingTop = '24px';
+        wrapper.style.paddingBottom = '24px';
+      }
+    }
 
     clog(
       `${type} init: container=${containerWidth.toFixed(
