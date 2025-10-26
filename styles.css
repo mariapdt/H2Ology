@@ -1,3 +1,87 @@
+@media (max-width: 360px) {
+    html {
+        font-size: 13px;
+    }
+    body {
+        font-size: 0.9rem;
+    }
+    .container,
+    .page-container,
+    .hydration-tips,
+    .home-cta-section,
+    .impact-section,
+    .app-section,
+    .mission-vision-section,
+    .values-section,
+    .contact-section {
+        padding: 0.5rem !important;
+    }
+    .page-title,
+    .home-cta-section h2,
+    .mission-vision-section h2,
+    .values-section h2,
+    .contact-section h2 {
+        font-size: 1.2rem !important;
+    }
+    .hero {
+        padding: 2rem 0.5rem 1rem !important;
+        min-height: 200px;
+    }
+    .hero-content h1 {
+        font-size: 1.5rem !important;
+    }
+    .tagline {
+        font-size: 0.9rem !important;
+    }
+    .product-showcase {
+        padding: 0.5rem !important;
+        gap: 0.5rem !important;
+    }
+    .bottle-image {
+        max-width: 120px !important;
+    }
+    .feature-card,
+    .sustainability-card,
+    .value-card,
+    .mission-card,
+    .vision-card {
+        padding: 0.5rem !important;
+        font-size: 0.9rem !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+    }
+    .highlight-item {
+        padding: 0.5rem !important;
+        gap: 0.5rem !important;
+    }
+    .highlight-icon,
+    .feature-highlight-icon,
+    .value-icon,
+    .card-icon {
+        font-size: 1.2rem !important;
+    }
+    .cta-button {
+        font-size: 0.9rem !important;
+        padding: 0.7rem 1.2rem !important;
+        min-width: 90px !important;
+    }
+    .carousel-btn {
+        width: 36px !important;
+        height: 36px !important;
+        font-size: 1rem !important;
+    }
+    .comparison-table {
+        font-size: 0.7rem !important;
+    }
+    .comparison-table th,
+    .comparison-table td {
+        padding: 0.3rem 0.1rem !important;
+    }
+    .result-number,
+    .stat-number {
+        font-size: 1.2rem !important;
+    }
+}
 * {
     margin: 0;
     padding: 0;
