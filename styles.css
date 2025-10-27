@@ -1131,10 +1131,17 @@ body {
 
 /* Hide non-visible carousel items without affecting layout */
 .carousel-hidden {
-    visibility: hidden !important;
     opacity: 0 !important;
     pointer-events: none !important;
-    transition: none !important; /* avoid accidental fades on hide */
+    visibility: hidden !important;
+    transition: none !important;
+    /* fade handled by .carousel-leaving */
+}
+/* Fade out for leaving carousel items */
+.carousel-leaving {
+    opacity: 0 !important;
+    visibility: visible !important;
+    transition: opacity 0.4s ease-in-out !important;
 }
 
 /* Suppress fade/opacity transitions during programmatic resets */

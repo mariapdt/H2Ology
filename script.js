@@ -178,7 +178,11 @@ function updateCarouselVisibility(type) {
         card.classList.remove("carousel-entering");
       } else {
         card.classList.remove("carousel-entering");
-        card.classList.add("carousel-hidden");
+        card.classList.add("carousel-leaving");
+        setTimeout(() => {
+          card.classList.remove("carousel-leaving");
+          card.classList.add("carousel-hidden");
+        }, 400); // match fade duration
       }
     });
   } else {
@@ -192,7 +196,11 @@ function updateCarouselVisibility(type) {
         allCards.forEach((card, i) => {
           if (i % originalCount === idx) {
             card.classList.remove("carousel-entering");
-            card.classList.add("carousel-hidden");
+            card.classList.add("carousel-leaving");
+            setTimeout(() => {
+              card.classList.remove("carousel-leaving");
+              card.classList.add("carousel-hidden");
+            }, 400);
           }
         });
       }
