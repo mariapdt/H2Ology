@@ -658,6 +658,66 @@ body {
     color: var(--dark-color) !important;
 }
 
+.project-brief-section {
+    padding: 0 0 5rem;
+}
+
+.project-brief-header {
+    max-width: 760px;
+    margin-bottom: 2.5rem;
+}
+
+.project-brief-header h2 {
+    font-size: 2.6rem;
+    color: var(--dark-color);
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.04em;
+}
+
+.project-brief-header p {
+    font-size: 1.08rem;
+    color: #5a6c7d;
+    line-height: 1.7;
+}
+
+.project-brief-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.brief-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 119, 204, 0.12);
+    border-radius: 18px;
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.brief-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    background: rgba(0, 119, 204, 0.08);
+    margin-bottom: 1.25rem;
+}
+
+.brief-card h3 {
+    font-size: 1.25rem;
+    color: var(--dark-color);
+    margin-bottom: 0.9rem;
+}
+
+.brief-card p {
+    color: #5a6c7d;
+    line-height: 1.75;
+}
+
 /* Mission & Vision Section */
 .mission-vision-section {
     padding: 6rem 3rem;

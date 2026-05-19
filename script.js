@@ -24,7 +24,7 @@ function calculateWater() {
   if (!weight || weight <= 0 || weight > 300) {
     resultDiv.innerHTML = `
             <div style="color: #e74c3c; font-size: 1.1rem;">
-                ⚠️ Introdu o greutate validă între 1 și 300 kg
+                Please enter a valid weight between 1 and 300 kg.
             </div>
         `;
     return;
@@ -37,13 +37,13 @@ function calculateWater() {
 
   // Display result with animation
   resultDiv.innerHTML = `
-    <div class="result-text">Ar trebui să bei aproximativ:</div>
+    <div class="result-text">You should drink approximately:</div>
     <div class="result-number">${waterNeeded} L</div>
     <div style="font-size: 1.1rem; color: #007ea7; margin-top: 1rem;">
-      Asta înseamnă aproximativ ${waterInML} ml sau ${waterInCups} pahare pe zi
+      That is about ${waterInML} ml or ${waterInCups} cups per day.
     </div>
     <div style="margin-top: 1.5rem; padding: 1rem; background: #e8f8f5; border-radius: 8px; color: #00695c;">
-      💧 <strong>Sfat util:</strong> Cu sticla ta inteligentă H2Ology vei primi memento-uri personalizate ca să atingi acest obiectiv!
+      <strong>Helpful tip:</strong> With your H2Ology smart bottle, you will receive personalized reminders to help you reach this goal.
     </div>
   `;
 }
